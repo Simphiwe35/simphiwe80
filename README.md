@@ -127,3 +127,34 @@ These answers can be derived from the Base64-encoded string extracted from the P
   <br />
 <br />
 <img src="https://i.imgur.com/cMm8g8V.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+    <br />
+<br />
+question
+suspicious binary connected to a remote server what address did it connect to
+add HTTP to your answer so that's
+suspicious binary guys it connected to a
+distillation server let's find out
+  
+Upon examining the "query name" field, we observe five events associated with DNS queries. Let's delve into one of these events to gain further insight.
+
+The "query name" field reveals domain names or servers that the system attempted to resolve through DNS queries. In this context, it appears that these queries are related to communication with a potential Command and Control (C2) server or the domain from which the suspicious binary was retrieved.
+
+One such domain identified in the query is "ngrock.io," which appears to be the main domain involved. Additionally, there is another extension or subdomain associated with this domain, indicating a connection destination for the executable after its download.
+
+Based on this analysis, it's apparent that these DNS queries are significant in understanding the network activity surrounding the suspicious binary and its communication with external entities.<br />
+<p align="center">
+<img src="https://i.imgur.com/kMccyGF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <br />
+<br />
+<img src="https://i.imgur.com/ZGYB08M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <br />
+<br />
+
+Based on the information provided, it appears that a partial script was downloaded to the same location as the suspicious binary. This partial script may have played a role in facilitating the encryption of files on the system, although it may not be the ransomware itself.
+
+To search for the partial script, we can simplify the process by filtering events for files with the ".ps1" extension, as partial scripts typically have this extension in PowerShell environments. By doing so, we can identify all instances of partial scripts in the events data.<br />
+<p align="center">
+<img src="https://i.imgur.com/kMccyGF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <br />
+<br />
+<img src="https://i.imgur.com/ZGYB08M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
