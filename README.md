@@ -154,7 +154,65 @@ Based on the information provided, it appears that a partial script was download
 
 To search for the partial script, we can simplify the process by filtering events for files with the ".ps1" extension, as partial scripts typically have this extension in PowerShell environments. By doing so, we can identify all instances of partial scripts in the events data.<br />
 <p align="center">
-<img src="https://i.imgur.com/kMccyGF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/SzyH5iL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   <br />
 <br />
-<img src="https://i.imgur.com/ZGYB08M.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/816hNy2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+question.<br />
+judging by the other names of the other Scripts the malicious script was flagged as
+ malicious what do you think was the actual name of script?<br />
+  
+Based on the information provided, it seems that the malicious script, although flagged as malicious, may have been given a different name by the attacker to conceal its true nature. To determine the actual name of the script, we can retrieve the MD5 hash associated with the script and use it to query VirusTotal, a service that provides information on file hashes and their reputations.
+
+By submitting the MD5 hash to VirusTotal, we can obtain details about the script, including its actual name. Upon reviewing the details, it appears that the real name of the script is "Black Sun," as suggested by the hash. However, it's possible that the attacker used a different name for the script to avoid detection or mislead analysts.
+
+This underscores the importance of conducting thorough investigations and utilizing multiple sources of information, such as file hashes and online threat intelligence platforms, to accurately identify and assess potential threats.<br />
+<p align="center">
+<img src="https://i.imgur.com/YDE1w6k.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <br />
+<br />
+<img src="https://i.imgur.com/AzIhGIX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+
+To uncover the full extent of the situation, it appears that the malicious binary was utilized to retrieve the partial script responsible for encrypting the files on the system. Now, the focus shifts to understanding the attacker's motives.
+
+One common indicator of ransomware activity is the presence of ransom notes, typically stored as text files. To determine if a ransom note exists, we can search for files with the ".txt" extension, as these files often contain ransom demands or instructions from attackers.
+
+Upon conducting the search for text files, we discover three events. These events likely correspond to the presence of ransom notes on the system. One of the notes is located in the "Downloads" directory.
+
+This discovery suggests that the attacker may indeed be pursuing a ransom-based attack, emphasizing the need for swift action to mitigate the impact and prevent further harm to the system and its data.<br />
+
+<p align="center">
+<img src="https://i.imgur.com/OBJmHg1.png"80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
+<img src="https://i.imgur.com/W8HbB5x.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <br />
+<br />  
+To address the last question regarding the location of the image file that was saved to replace the user's desktop wallpaper, we can search for image files on the system. In this case, we'll start by searching for files with the ".jpg" extension, as this is a common format for image files. We may also search for other common image formats such as PNG or BMP, depending on the attacker's preferences.
+
+Upon searching for JPG files, we discover two events indicating the presence of image files. These events provide the directory paths where the images are stored. By examining these paths, we can determine the full path of the image file that was used to replace the desktop wallpaper.
+
+This completes the challenge, as we have successfully identified the paths of both the ransom notes and the image file used to replace the desktop wallpaper, providing valuable insights into the attacker's actions and the compromise of the system.<br /> 
+<p align="center">
+<img src="https://i.imgur.com/0DE0gG1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <br />
+<br />
+<img src="https://i.imgur.com/wAgCpQq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+</p>
+
+<!--
+ ```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
+--!>
+
+
